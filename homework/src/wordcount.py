@@ -14,16 +14,9 @@ def read_all_lines():
 
 
 def main():
-    ###
-    # all_lines = read_all_lines()
+
     input_files_list = os.listdir("data/input/")
 
-    ### read all lines
-    ### preprocess lines
-    ### split in words
-    ### count words
-    ### write count words
-    write_count_words(counter)
     # count the frequency of the words in the files in the input directory
     counter = {}
     for filename in input_files_list:
@@ -33,8 +26,8 @@ def main():
                     w = w.lower().strip(",.!?")
                     counter[w] = counter.get(w, 0) + 1
 
-    ###
     # create the directory output/ if it doesn't exist
+    write_count_words(counter)
 
 
 def write_count_words(counter):
@@ -49,4 +42,5 @@ def write_count_words(counter):
 
 
 if __name__ == "__main__":
+
     main()
