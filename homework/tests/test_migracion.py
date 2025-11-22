@@ -1,6 +1,6 @@
 import os
 
-from homework.src.wordcount import main
+from ..src.wordcount import main
 
 
 def test_migracion():
